@@ -37,7 +37,7 @@ class DNSDOTCOM_API {
 
 	function getURL() {
 		if ($this->_sandbox) {
-			return "http://sandbox.comwired.com/api/";
+			return "http://sandbox.dns.com/api/";
 		}
 		return "https://www.dns.com/api/";
 	}
