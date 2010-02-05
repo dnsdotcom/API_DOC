@@ -2,6 +2,47 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: function getCountriesInCountryGroup</title>
 </head><body bgcolor="#f0f0f8">
-<dl><dt><a name="-getCountriesInCountryGroup"><strong>getCountriesInCountryGroup</strong></a>(request, *args, **kwargs)</dt><dd><tt>Get&nbsp;a&nbsp;list&nbsp;of&nbsp;countries&nbsp;in&nbsp;country&nbsp;group</tt></dd></dl>
+<dl><dt><a name="-getCountriesInCountryGroup"><strong>getCountriesInCountryGroup</strong></a>(request, *args, **kwargs)</dt><dd><tt>Get&nbsp;a&nbsp;list&nbsp;of&nbsp;countries&nbsp;in&nbsp;country&nbsp;group.<br>
+&nbsp;<br>
+@required&nbsp;string&nbsp;`countryGroup`&nbsp;name&nbsp;of&nbsp;country&nbsp;group<br>
+&nbsp;<br>
+@response<br>
+{"meta":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id":&nbsp;2,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"success":&nbsp;1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"Europe"<br>
+},<br>
+"data":&nbsp;[{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iso_code":&nbsp;"DK",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"Denmark"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iso_code":&nbsp;"FR",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"France"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iso_code":&nbsp;"DE",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"Germany"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iso_code":&nbsp;"HU",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"Hungary"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iso_code":&nbsp;"IE",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"Ireland"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iso_code":&nbsp;"LT",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"Lithuania"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iso_code":&nbsp;"LU",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"Luxembourg"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iso_code":&nbsp;"PT",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"Portugal"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iso_code":&nbsp;"ES",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"Spain"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"iso_code":&nbsp;"SZ",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"Swaziland"<br>
+}]<br>
+}</tt></dd></dl>
 
 </body></html>

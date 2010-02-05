@@ -2,6 +2,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: function getUserDetails</title>
 </head><body bgcolor="#f0f0f8">
-<dl><dt><a name="-getUserDetails"><strong>getUserDetails</strong></a>(request, *args, **kwargs)</dt><dd><tt>Get&nbsp;a&nbsp;subusers&nbsp;details</tt></dd></dl>
+<dl><dt><a name="-getUserDetails"><strong>getUserDetails</strong></a>(request, *args, **kwargs)</dt><dd><tt>Get&nbsp;a&nbsp;subusers&nbsp;details<br>
+&nbsp;<br>
+@required&nbsp;string&nbsp;`resellerCode`&nbsp;your&nbsp;reseller&nbsp;code<br>
+@required&nbsp;string&nbsp;`email`&nbsp;User's&nbsp;email&nbsp;address<br>
+&nbsp;<br>
+@response<br>
+{"meta":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"email":&nbsp;"demo@example.com",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"success":&nbsp;1<br>
+},<br>
+"data":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"state_province":&nbsp;"KY",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"city":&nbsp;"Louisville",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"first_name":&nbsp;"Demo",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"last_name":&nbsp;"User",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"address1":&nbsp;"1234&nbsp;Example&nbsp;BLVD",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"address2":&nbsp;"Apt&nbsp;\#1",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fax":&nbsp;"555-555-5555",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"phone":&nbsp;"555-555-5555",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"postal_code":&nbsp;"55555",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"country":&nbsp;"United&nbsp;States",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id":&nbsp;"170"<br>
+}<br>
+}</tt></dd></dl>
 
 </body></html>

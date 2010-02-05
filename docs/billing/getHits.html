@@ -2,6 +2,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: function getHits</title>
 </head><body bgcolor="#f0f0f8">
-<dl><dt><a name="-getHits"><strong>getHits</strong></a>(request, *args, **kwargs)</dt><dd><tt>Get&nbsp;logging&nbsp;information</tt></dd></dl>
+<dl><dt><a name="-getHits"><strong>getHits</strong></a>(request, *args, **kwargs)</dt><dd><tt>Get&nbsp;logging&nbsp;information<br>
+&nbsp;<br>
+@required&nbsp;string&nbsp;`domain`<br>
+&nbsp;<br>
+@optional&nbsp;date&nbsp;`start`&nbsp;in&nbsp;format&nbsp;2009-12-29<br>
+@optional&nbsp;date&nbsp;`end`&nbsp;in&nbsp;formation&nbsp;2009-12-29<br>
+(note:&nbsp;maximum&nbsp;date&nbsp;difference&nbsp;of&nbsp;60&nbsp;days)<br>
+&nbsp;<br>
+@response<br>
+{"meta":{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"success":1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"domain":"example.com.",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"start":"2009-12-29",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"end":"2009-12-30"<br>
+},<br>
+"data":[{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"date":"2009-12-29",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bytes_sent":123456,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bytes_received":123456,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bytes_total":246912<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+}</tt></dd></dl>
 
 </body></html>

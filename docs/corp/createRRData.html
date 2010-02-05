@@ -2,6 +2,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: function createRRData</title>
 </head><body bgcolor="#f0f0f8">
-<dl><dt><a name="-createRRData"><strong>createRRData</strong></a>(request, *args, **kwargs)</dt><dd><tt>Create&nbsp;a&nbsp;new&nbsp;resource&nbsp;record&nbsp;(RR).</tt></dd></dl>
+<dl><dt><a name="-createRRData"><strong>createRRData</strong></a>(request, *args, **kwargs)</dt><dd><tt>Create&nbsp;a&nbsp;new&nbsp;resource&nbsp;record&nbsp;(RR).<br>
+&nbsp;<br>
+(Indicate&nbsp;only&nbsp;One)<br>
+@unique&nbsp;string&nbsp;`domain`<br>
+@unique&nbsp;string&nbsp;`group`&nbsp;name&nbsp;of&nbsp;DomainGroup<br>
+&nbsp;<br>
+@required&nbsp;string&nbsp;`host`&nbsp;host&nbsp;name<br>
+@required&nbsp;string&nbsp;`type`&nbsp;resource&nbsp;record&nbsp;type<br>
+@required&nbsp;string&nbsp;`rdata`&nbsp;RR&nbsp;Answer<br>
+&nbsp;<br>
+@optional&nbsp;string&nbsp;`countryGroup`&nbsp;country&nbsp;group&nbsp;to&nbsp;assign&nbsp;to<br>
+@optional&nbsp;string&nbsp;`country_iso2`&nbsp;ISO2&nbsp;Country&nbsp;Code<br>
+@optional&nbsp;string&nbsp;`region`&nbsp;region's&nbsp;name<br>
+@optional&nbsp;string&nbsp;`city`&nbsp;city&nbsp;name<br>
+@optional&nbsp;integer&nbsp;`priority`&nbsp;Integer&nbsp;value&nbsp;for&nbsp;MX&nbsp;(mail)&nbsp;records<br>
+@optional&nbsp;bool&nbsp;`is_wildcard`&nbsp;indicate&nbsp;the&nbsp;RR&nbsp;is&nbsp;a&nbsp;wildcard.<br>
+@optional&nbsp;integer&nbsp;`ttl`&nbsp;Time&nbsp;To&nbsp;Live&nbsp;for&nbsp;resolvers&nbsp;to&nbsp;hold&nbsp;cache&nbsp;of&nbsp;rdata,&nbsp;between&nbsp;1&nbsp;and&nbsp;65535</tt></dd></dl>
 
 </body></html>

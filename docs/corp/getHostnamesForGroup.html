@@ -2,6 +2,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: function getHostnamesForGroup</title>
 </head><body bgcolor="#f0f0f8">
-<dl><dt><a name="-getHostnamesForGroup"><strong>getHostnamesForGroup</strong></a>(request, *args, **kwargs)</dt><dd><tt>Return&nbsp;the&nbsp;hostnames&nbsp;that&nbsp;have&nbsp;been&nbsp;created&nbsp;under&nbsp;a&nbsp;domain&nbsp;group</tt></dd></dl>
+<dl><dt><a name="-getHostnamesForGroup"><strong>getHostnamesForGroup</strong></a>(request, *args, **kwargs)</dt><dd><tt>Return&nbsp;the&nbsp;hostnames&nbsp;that&nbsp;have&nbsp;been&nbsp;created&nbsp;under&nbsp;a&nbsp;domain&nbsp;group<br>
+&nbsp;<br>
+@required&nbsp;string&nbsp;`group`&nbsp;domain&nbsp;group&nbsp;name<br>
+&nbsp;<br>
+@response<br>
+{"meta":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"group":&nbsp;"My&nbsp;Custom&nbsp;Group",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"success":&nbsp;1<br>
+},<br>
+"data":&nbsp;[{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"num_rr":&nbsp;3,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"date_created":&nbsp;"2009-04-27&nbsp;13:31:03",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id":&nbsp;158,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"date_last_modified":&nbsp;"2009-04-27&nbsp;13:31:03"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"num_rr":&nbsp;1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"date_created":&nbsp;"2009-04-27&nbsp;13:31:03",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id":&nbsp;159,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"www",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"date_last_modified":&nbsp;"2009-04-27&nbsp;13:31:03"<br>
+},&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"num_rr":&nbsp;1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"date_created":&nbsp;"2009-04-27&nbsp;13:31:03",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id":&nbsp;160,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name":&nbsp;"mail",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"date_last_modified":&nbsp;"2009-04-27&nbsp;13:31:03"<br>
+}]<br>
+}<br>
+&nbsp;<br>
+num_rr&nbsp;-&nbsp;The&nbsp;number&nbsp;of&nbsp;resource&nbsp;records&nbsp;that&nbsp;exist&nbsp;for&nbsp;the&nbsp;host&nbsp;name.</tt></dd></dl>
 
 </body></html>

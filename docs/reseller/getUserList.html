@@ -2,6 +2,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: function getUserList</title>
 </head><body bgcolor="#f0f0f8">
-<dl><dt><a name="-getUserList"><strong>getUserList</strong></a>(request, *args, **kwargs)</dt><dd><tt>Fetch&nbsp;a&nbsp;list&nbsp;of&nbsp;users</tt></dd></dl>
+<dl><dt><a name="-getUserList"><strong>getUserList</strong></a>(request, *args, **kwargs)</dt><dd><tt>Fetch&nbsp;a&nbsp;list&nbsp;of&nbsp;users<br>
+&nbsp;<br>
+@required&nbsp;string&nbsp;`resellerCode`&nbsp;Your&nbsp;reseller&nbsp;Code<br>
+&nbsp;<br>
+@optional&nbsp;string&nbsp;`search_term`&nbsp;Keyword&nbsp;to&nbsp;search&nbsp;for&nbsp;among&nbsp;(email&nbsp;and&nbsp;name)<br>
+&nbsp;<br>
+@response<br>
+{"meta":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"success":&nbsp;1<br>
+},<br>
+"data":&nbsp;[{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"first_name":&nbsp;"Example",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"last_name":&nbsp;"User",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"enterprise",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id":&nbsp;169,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"email":&nbsp;"example@example.com"<br>
+},{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"first_name":&nbsp;"Demo",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"last_name":&nbsp;"User",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"domainer",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id":&nbsp;170,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"email":&nbsp;"demo@example.com"<br>
+}]<br>
+}</tt></dd></dl>
 
 </body></html>

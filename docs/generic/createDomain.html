@@ -2,6 +2,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: function createDomain</title>
 </head><body bgcolor="#f0f0f8">
-<dl><dt><a name="-createDomain"><strong>createDomain</strong></a>(request, *args, **kwargs)</dt><dd><tt>Create&nbsp;a&nbsp;domain&nbsp;name.</tt></dd></dl>
+<dl><dt><a name="-createDomain"><strong>createDomain</strong></a>(request, *args, **kwargs)</dt><dd><tt>Create&nbsp;a&nbsp;domain&nbsp;name.<br>
+&nbsp;<br>
+@required&nbsp;string&nbsp;`mode`&nbsp;the&nbsp;operational&nbsp;mode.<br>
+@required&nbsp;string&nbsp;`domain`&nbsp;the&nbsp;domain&nbsp;name.<br>
+&nbsp;<br>
+@optional&nbsp;string&nbsp;`group`&nbsp;name&nbsp;of&nbsp;the&nbsp;domain&nbsp;group&nbsp;to&nbsp;add<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;domain&nbsp;to&nbsp;_IF_&nbsp;`mode`&nbsp;is&nbsp;'group'<br>
+&nbsp;<br>
+@response<br>
+{"meta"&nbsp;:&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"success"&nbsp;:&nbsp;1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id"&nbsp;:&nbsp;3233<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}</tt></dd></dl>
 
 </body></html>

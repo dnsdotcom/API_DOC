@@ -2,6 +2,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: function createHostname</title>
 </head><body bgcolor="#f0f0f8">
-<dl><dt><a name="-createHostname"><strong>createHostname</strong></a>(request, *args, **kwargs)</dt><dd><tt>Create&nbsp;a&nbsp;new&nbsp;hostname&nbsp;for&nbsp;a&nbsp;domain&nbsp;or&nbsp;domain&nbsp;group</tt></dd></dl>
+<dl><dt><a name="-createHostname"><strong>createHostname</strong></a>(request, *args, **kwargs)</dt><dd><tt>Create&nbsp;a&nbsp;new&nbsp;hostname&nbsp;for&nbsp;a&nbsp;domain&nbsp;or&nbsp;domain&nbsp;group.<br>
+&nbsp;<br>
+(Indicate&nbsp;only&nbsp;One)<br>
+@unique&nbsp;string&nbsp;`domain`<br>
+@unique&nbsp;string&nbsp;`group`&nbsp;name&nbsp;of&nbsp;DomainGroup<br>
+&nbsp;<br>
+@required&nbsp;string&nbsp;`host`&nbsp;Host&nbsp;name&nbsp;value,&nbsp;can&nbsp;be&nbsp;emptry&nbsp;to&nbsp;indicate&nbsp;root&nbsp;zone&nbsp;of&nbsp;the&nbsp;domain.<br>
+&nbsp;<br>
+@optional&nbsp;bool&nbsp;`is_urlforward`&nbsp;Set&nbsp;bit&nbsp;if&nbsp;want&nbsp;to&nbsp;setup&nbsp;this&nbsp;hostname&nbsp;as&nbsp;a&nbsp;url&nbsp;forwarding&nbsp;address.<br>
+@optional&nbsp;string&nbsp;`default`&nbsp;set&nbsp;default&nbsp;address&nbsp;to&nbsp;send&nbsp;undefined&nbsp;traffic&nbsp;to.</tt></dd></dl>
 
 </body></html>
