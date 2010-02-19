@@ -1,11 +1,11 @@
 DNS.com API Documentation
 
-This document serves as an overview to the Comwired.com DNS service API.
+This document serves as an overview to the DNS.com DNS service API.
 To attain access to use the API approval must be applied for and granted
-by the administrators of the Comwired.com DNS platform. More information
+by the administrators of the DNS.com DNS platform. More information
 can be accessed either thru the website () or by emailing . After an
 overview of this documentation the user should be able to understand the
-concepts of how Comwired manages zones and geographic RR data as well as
+concepts of how DNS.com manages zones and geographic RR data as well as
 execute on these concepts to manage their account.
 
 
@@ -14,7 +14,7 @@ execute on these concepts to manage their account.
 Technology Overview
 
 To access the API special permission must be granted by the
-administrators. Please contact Comwired for this access, as well as
+administrators. Please contact DNS.com for this access, as well as
 access to the sandbox.
 
 
@@ -29,7 +29,7 @@ For Testing and Integration Developers
 The address to the sandbox location is . To interact with the sandbox
 you must create your own account on it. The sandbox is an entire test
 suite. DNS is on this IP and updates should be visible from the single
-IP host just as if it were on our Comwired Anycast network. Additionally
+IP host just as if it were on our DNS.com Anycast network. Additionally
 URL forward services are available for testing on port 8080.
 
 
@@ -83,14 +83,14 @@ only by enterprise users.
 
 Domain group
 
-A method of grouping domains for easier management. In Comwired you can
+A method of grouping domains for easier management. In DNS.com you can
 create a change to a group that will profile how all domains in it
 behave.
 
 Traffic Destination
 
 Is a parking target for Domainer users. A traffic destination might be
-NameDrive or Sedo or any other service configured within Comwired.
+NameDrive or Sedo or any other service configured within DNS.com.
 
 Traffic Rule
 
@@ -118,7 +118,7 @@ Example Request
 
 <?php
 $AUTH_TOKEN = 'xxxxxxxxxxxxxxxxxxxxx';
-$hostname = 'sandbox.comwired.com';
+$hostname = 'sandbox.DNS.com';
 $cmd = 'getDomains';
 
 $url = "http://${hostname}/api/${cmd}/?AUTH_TOKEN=${AUTH_TOKEN}";
