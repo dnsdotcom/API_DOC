@@ -1,1 +1,166 @@
-API Documentation for the DNS.com API
+DNS.com API Documentation
+
+This document serves as an overview to the Comwired.com DNS service API.
+To attain access to use the API approval must be applied for and granted
+by the administrators of the Comwired.com DNS platform. More information
+can be accessed either thru the website () or by emailing . After an
+overview of this documentation the user should be able to understand the
+concepts of how Comwired manages zones and geographic RR data as well as
+execute on these concepts to manage their account.
+
+
+
+
+Technology Overview
+
+To access the API special permission must be granted by the
+administrators. Please contact Comwired for this access, as well as
+access to the sandbox.
+
+
+
+The API uses a simple Query String request for all actions to be made
+and will return a crafted JSON () formated data response.
+
+
+
+For Testing and Integration Developers
+
+The address to the sandbox location is . To interact with the sandbox
+you must create your own account on it. The sandbox is an entire test
+suite. DNS is on this IP and updates should be visible from the single
+IP host just as if it were on our Comwired Anycast network. Additionally
+URL forward services are available for testing on port 8080.
+
+
+
+A Note For Enterprise Users
+
+Please be aware there is a variable replacement allowed. When records
+are compiled the token %s is replaced with the domain name root zone.
+For example if you create a group and add the domain example.com and
+example2.com. Create a CNAME resource record for the root zone that
+answers as www.%s, what will be generated for each of your domains
+resembled below:
+
+
+
+example.com   CNAME → www.example.com
+
+example2.com CNAME → www.example2.com
+
+
+
+
+Round Robin Support
+
+To implement round robin hosting for your domain all that is required is
+to create 2 RR records. The multiple RR's will cycle during serving thus
+giving the effect of round robin.
+
+
+
+
+URL Forward Support
+
+To ensure we are always able to return a record for any host name
+requested we require that if you want to use URL forwarding that a
+hostname be defined for URL forwarding rules. URL forward rules will not
+be allowed to co-exist for a host name with other resource record types.
+
+
+
+
+Terminology
+
+Operational Mode
+
+Sometimes references as 'mode', can be values of: group, custom,
+advanced.
+
+Group is globally accessible, custom only by domainers, and advanced is
+only by enterprise users.
+
+Domain group
+
+A method of grouping domains for easier management. In Comwired you can
+create a change to a group that will profile how all domains in it
+behave.
+
+Traffic Destination
+
+Is a parking target for Domainer users. A traffic destination might be
+NameDrive or Sedo or any other service configured within Comwired.
+
+Traffic Rule
+
+Is the combination of a domain name, a country group (geographical
+target) and the traffic destination.
+
+Confirmation Bit
+
+Any value that will evaluate to True to verify the intent of the action.
+
+Resource Record (RR)
+
+A resource records can be easily summed up by the complete zone being
+requested in association with the record type (ex. MX, CNAME, A...) with
+the answer.
+
+
+
+
+Required Fields
+
+AUTH_TOKEN - 28 Byte authorization token generated.
+
+Example Request
+
+<?php
+$AUTH_TOKEN = 'xxxxxxxxxxxxxxxxxxxxx';
+$hostname = 'sandbox.comwired.com';
+$cmd = 'getDomains';
+
+$url = "http://${hostname}/api/${cmd}/?AUTH_TOKEN=${AUTH_TOKEN}";
+
+$results = file_get_contents($url);
+
+echo $results;
+?>
+
+
+
+Example Successful Response
+
+{"meta": {
+	"success": 1
+	},
+"data": [{
+		"date_created": "2009-02-21 04:57:19",
+		"mode": "advanced",
+		"id": 3,
+		"name": "example.net.", 
+		"date_last_modified": "2009-02-21 04:57:19", 
+	},{
+		"date_created": "2008-08-03 20:38:33", 
+		"mode":"group",
+		"id":4,
+		"name":"groupexample.net.",
+		"date_last_modified":"2009-08-03 20:38:33"
+	}]
+}
+
+
+
+Example Error Response
+
+{"meta": {
+	"success": 0,
+	"error": "No Domains Found"
+	},
+"data": {}
+}
+
+
+Additionally: If a search or lookup fails will return in a HTTP header
+response code 404. For Errors 500 and so on.
