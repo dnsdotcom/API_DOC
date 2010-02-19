@@ -1,8 +1,7 @@
 <?php
 
   /// User supplied Options
-$email    = 'xxxxx@xxxxx.xxx';
-$password = 'xxxxxxxxxxxxxxx';
+$AUTH_TOKEN = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
   /// Create a query string
 
@@ -26,12 +25,10 @@ function mkQueryString($arr, $key="", $recurs=1) {
   /// Object to make queries against DNS.com's API
 
 class DNSDOTCOM_API {
-	var $_email   = "";
-	var $_password= "";
+	var $_auth_token   = "";
 	var $_sandbox = False;
-	function __construct($email, $password, $sandbox=False) {
-		$this->_email   = $email;
-		$this->_password= $password;
+	function __construct($auth_token, $sandbox=False) {
+		$this->_auth_token = strtoupper($auth_token);
 		$this->_sandbox = $sandbox;
 	}
 
@@ -44,8 +41,7 @@ class DNSDOTCOM_API {
 
 	function __call($cmd, $args) {
 		$url = $this->getURL().$cmd.'/?';
-	     $args['email'] = $this->_email;
-		$args['password'] = $this->_password;
+	     $args['AUTH_TOKEN'] = $this->_auth_token;
 		$url .= mkQueryString($args);
 
 		$json_string = file_get_contents($url);
@@ -57,7 +53,7 @@ class DNSDOTCOM_API {
 
   /// Execute Commands
 
-$obj = new DNSDOTCOM_API($email, $password, True);
+$obj = new DNSDOTCOM_API($AUTH_TOKEN, True);
 
 $result = $obj->createDomain(array(
 							'domain' => 'example.com',
