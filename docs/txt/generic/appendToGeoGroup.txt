@@ -1,0 +1,7 @@
+Add Geographic matches to a GeoGroup
+
+@required string `name` of GeoGroup
+@required string `iso2_code` the ISO2 code of the country
+
+@optional string `region` the name of the region in the country
+@optional string `city` the name of the city in the region

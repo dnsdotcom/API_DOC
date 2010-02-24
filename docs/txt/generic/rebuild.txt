@@ -1,0 +1,5 @@
+Set something to rebuild
+
+(Indicate only One)
+@unique string `domain`
+@unique string `group` name of DomainGroup

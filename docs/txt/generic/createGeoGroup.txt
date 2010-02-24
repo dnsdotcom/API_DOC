@@ -1,0 +1,3 @@
+Create a GeoGroup
+
+@required string `name` name of the group

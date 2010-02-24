@@ -1,0 +1,19 @@
+Get a list of the available geogroups
+
+@optional string `search_term` keyword to search for
+
+@response
+{"meta": {
+        "success": 1
+        },
+"data": [{
+        "editable": false,
+        "id": 2,
+        "name": "Europe",
+        },
+        {
+        "editable": true,
+        "id": 5,
+        "name": "West Coast"
+}]
+}

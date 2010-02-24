@@ -1,0 +1,3 @@
+Retrieve the details about a GeoGroup
+
+@required string `name` name of the GeoGroup
