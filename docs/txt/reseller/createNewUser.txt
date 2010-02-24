@@ -1,0 +1,20 @@
+Create a new user
+
+@required string `resellerCode` Your Reseller Code
+@required email `user_email` New user's email address.
+@required string `user_password` New user's password.
+@required string `user_password_confirm` Confirm new user's password.
+@required string `user_first_name` New user's first name.
+@required string `user_last_name` New user's last name.
+
+
+@optional string `user_phone` New user's primary phone number.
+@optional string `user_address1` New user's mailing address.
+@optional string `user_address2` New user's continued mailing address.
+@optional string `user_city` New user's city.
+@optional string `user_state_province` New user's state/province.
+@optional string `user_postal_code` New user's postal code.
+@optional string `user_country_iso2` New user's country's iso2 code.
+@optional string `user_fax` New user's fax number.
+@optional string `user_company` New user's company name.
+@optional string `send_welcome_email` Send the new user a welcome email. Default: yes.

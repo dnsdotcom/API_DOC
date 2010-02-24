@@ -1,0 +1,22 @@
+Get logging information
+
+@required string `domain`
+
+@optional date `start` in format 2009-12-29
+@optional date `end` in formation 2009-12-29
+(note: maximum date difference of 60 days)
+
+@response
+{"meta":{
+        "success":1,
+        "domain":"example.com.",
+        "start":"2009-12-29",
+        "end":"2009-12-30"
+},
+"data":[{
+        "date":"2009-12-29",
+        "bytes_sent":123456,
+        "bytes_received":123456,
+        "bytes_total":246912
+        }]
+}

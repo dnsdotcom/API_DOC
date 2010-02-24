@@ -1,0 +1,27 @@
+Return the RR data that a hostname has configured
+
+(Indicate only One)
+@unique string `domain`
+@unique string `group` name of DomainGroup
+
+@required string `host` host name (Note: Blank if wanting Root zone of domain)
+
+@response
+{"meta": {
+        "fqdn": "www.example.net.",
+        "success": 1
+},
+"data": [{
+        "city": null,
+        "date_last_modified": "2009-04-27 13:31:03",
+        "country": null,
+        "region": null,
+        "priority": null,
+        "answer": "209.40.206.249",
+        "date_created": "2009-04-27 13:31:03",
+        "type": "A",
+        "id": 285,
+        "ttl":3600,
+        "is_wildcard":0
+}]
+}

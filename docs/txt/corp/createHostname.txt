@@ -1,0 +1,10 @@
+Create a new hostname for a domain or domain group.
+
+(Indicate only One)
+@unique string `domain`
+@unique string `group` name of DomainGroup
+
+@required string `host` Host name value, can be emptry to indicate root zone of the domain.
+
+@optional bool `is_urlforward` Set bit if want to setup this hostname as a url forwarding address.
+@optional string `default` set default address to send undefined traffic to.

@@ -1,0 +1,8 @@
+remove a hostname from a domain or domain group
+
+(Indicate only One)
+@unique string `domain`
+@unique string `group` name of DomainGroup
+
+@required string `host`
+@required bool `confirm` bit must be set to process

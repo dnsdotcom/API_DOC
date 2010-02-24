@@ -1,0 +1,4 @@
+Remove RData from a host.
+
+@required integer `rr_id` rdata id as queried from server.
+@required bool `confirm` bit must be set to process

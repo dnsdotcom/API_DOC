@@ -1,0 +1,14 @@
+Create a domain name.
+
+@required string `mode` the operational mode.
+@required string `domain` the domain name.
+
+@optional string `group` name of the domain group to add
+                        the domain to _IF_ `mode` is 'group'
+
+@response
+{"meta" : {
+        "success" : 1,
+        "id" : 3233
+        }
+}

@@ -1,0 +1,10 @@
+Create a domain group.
+
+@required string `name` Name of the new Group
+
+@response
+{"meta" : {
+        "success" : 1,
+        "id" : 3233
+        }
+}

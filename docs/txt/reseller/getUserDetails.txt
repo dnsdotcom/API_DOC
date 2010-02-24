@@ -1,0 +1,24 @@
+Get a subusers details
+
+@required string `resellerCode` your reseller code
+@required string `email` User's email address
+
+@response
+{"meta": {
+        "email": "demo@example.com",
+        "success": 1
+},
+"data": {
+        "state_province": "KY",
+        "city": "Louisville",
+        "first_name": "Demo",
+        "last_name": "User",
+        "address1": "1234 Example BLVD",
+        "address2": "Apt \#1",
+        "fax": "555-555-5555",
+        "phone": "555-555-5555",
+        "postal_code": "55555",
+        "country": "United States",
+        "id": "170"
+}
+}

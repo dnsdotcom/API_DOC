@@ -1,0 +1,6 @@
+An API to update a dynamic IP address.
+
+@required integer `rr_id` rdata id as queried from server.
+@required string `rdata` answer data
+
+@optional integer `ttl` Time To Live for resolvers to hold cache of rdata, between 1 and 65535

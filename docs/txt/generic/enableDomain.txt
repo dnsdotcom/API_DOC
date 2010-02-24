@@ -1,0 +1,4 @@
+Enable a Disabled Domain
+
+@required string `domain`
+@required bool `confirm` bit must be set to process

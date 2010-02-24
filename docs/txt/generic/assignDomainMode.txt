@@ -1,0 +1,6 @@
+Assign a domain to a new mode.
+
+@required string `domain`
+@required string `mode` operational mode
+
+@optional string `group` DomainGroup if `mode` is 'group'

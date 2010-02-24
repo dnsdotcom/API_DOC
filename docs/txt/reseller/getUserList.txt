@@ -1,0 +1,24 @@
+Fetch a list of users
+
+@required string `resellerCode` Your reseller Code
+
+@optional string `search_term` Keyword to search for among (email and name)
+
+@response
+{"meta": {
+        "success": 1
+},
+"data": [{
+        "first_name": "Example",
+        "last_name": "User",
+        "type": "enterprise",
+        "id": 169,
+        "email": "example@example.com"
+},{
+        "first_name": "Demo",
+        "last_name": "User",
+        "type": "domainer",
+        "id": 170,
+        "email": "demo@example.com"
+}]
+}

@@ -1,0 +1,4 @@
+Rmove a domain group. The group must not have any domains allocated to it.
+
+@required string `group`
+@required bool `confirm` bit must be set to process

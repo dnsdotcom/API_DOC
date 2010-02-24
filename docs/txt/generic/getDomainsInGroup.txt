@@ -1,0 +1,16 @@
+Return the domain that are in the group.
+
+@required string `group` name of DomainGroup
+
+@response
+{"meta": {
+        "success": 1,
+        "group" : "My Custom Group"
+},
+"data": [{
+        "id" : 4,
+        "date_created" : "2009-08-03 20:38:33",
+        "date_last_modified":"2009-08-03 20:38:33",
+        "name":"groupexample.net."
+}]
+}
