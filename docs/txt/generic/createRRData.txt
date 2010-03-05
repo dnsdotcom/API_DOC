@@ -8,7 +8,7 @@ Create a new resource record (RR).
 @required string `type` resource record type
 @required string `rdata` RR Answer
 
-@optional string `countryGroup` country group to assign to
+@optional string `geoGroup` country group to assign to
 @optional string `country_iso2` ISO2 Country Code
 @optional string `region` region's name
 @optional string `city` city name
