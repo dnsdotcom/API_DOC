@@ -8,3 +8,8 @@ Create a new hostname for a domain or domain group.
 
 @optional bool `is_urlforward` Set bit if want to setup this hostname as a url forwarding address.
 @optional string `default` set default address to send undefined traffic to.
+
+
+:NOTICE:
+If host already exists you will receive a HTTP Status code 400 (Bad Request) with the current host id
+in the meta section.

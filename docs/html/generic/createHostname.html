@@ -11,6 +11,11 @@
 @required&nbsp;string&nbsp;`host`&nbsp;Host&nbsp;name&nbsp;value,&nbsp;can&nbsp;be&nbsp;emptry&nbsp;to&nbsp;indicate&nbsp;root&nbsp;zone&nbsp;of&nbsp;the&nbsp;domain.<br>
 &nbsp;<br>
 @optional&nbsp;bool&nbsp;`is_urlforward`&nbsp;Set&nbsp;bit&nbsp;if&nbsp;want&nbsp;to&nbsp;setup&nbsp;this&nbsp;hostname&nbsp;as&nbsp;a&nbsp;url&nbsp;forwarding&nbsp;address.<br>
-@optional&nbsp;string&nbsp;`default`&nbsp;set&nbsp;default&nbsp;address&nbsp;to&nbsp;send&nbsp;undefined&nbsp;traffic&nbsp;to.</tt></dd></dl>
+@optional&nbsp;string&nbsp;`default`&nbsp;set&nbsp;default&nbsp;address&nbsp;to&nbsp;send&nbsp;undefined&nbsp;traffic&nbsp;to.<br>
+&nbsp;<br>
+&nbsp;<br>
+:NOTICE:<br>
+If&nbsp;host&nbsp;already&nbsp;exists&nbsp;you&nbsp;will&nbsp;receive&nbsp;a&nbsp;HTTP&nbsp;Status&nbsp;code&nbsp;400&nbsp;(Bad&nbsp;Request)&nbsp;with&nbsp;the&nbsp;current&nbsp;host&nbsp;id<br>
+in&nbsp;the&nbsp;meta&nbsp;section.</tt></dd></dl>
 
 </body></html>

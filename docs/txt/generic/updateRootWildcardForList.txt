@@ -1,0 +1,9 @@
+Update the root wildcard for the provided domain list or group.
+::NOTICE:: Be advised that this will delete all wildcard records (except SOA)
+that exist for the primary domain.
+
+@required string `IP`  IPv4 address destination for wildcard
+
+(Indicate only One)
+@unique list `domains` (reference list in API command `createDomains`)
+@unique string `group` Name of group to update

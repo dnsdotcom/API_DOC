@@ -1,0 +1,38 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: function createDomains</title>
+</head><body bgcolor="#f0f0f8">
+<dl><dt><a name="-createDomains"><strong>createDomains</strong></a>(request, *args, **kwargs)</dt><dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert&nbsp;multiple&nbsp;domains.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;the&nbsp;mode&nbsp;is&nbsp;advanced,&nbsp;just&nbsp;like&nbsp;with&nbsp;individual&nbsp;imports,&nbsp;the&nbsp;SOA<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;will&nbsp;be&nbsp;the&nbsp;only&nbsp;configuration&nbsp;option&nbsp;already&nbsp;created.&nbsp;All&nbsp;additional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;settings&nbsp;will&nbsp;have&nbsp;to&nbsp;be&nbsp;called&nbsp;on&nbsp;their&nbsp;own.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@required&nbsp;string&nbsp;`mode`&nbsp;the&nbsp;operational&nbsp;mode<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@opitonal&nbsp;string&nbsp;`group`&nbsp;name&nbsp;of&nbsp;the&nbsp;domain&nbsp;group&nbsp;to&nbsp;add<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;domains&nbsp;to&nbsp;_IF_&nbsp;`mode`&nbsp;is&nbsp;'group'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@required&nbsp;list&nbsp;`domains`&nbsp;a&nbsp;list&nbsp;of&nbsp;domains&nbsp;in&nbsp;POST&nbsp;data<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@example<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$curl&nbsp;-i&nbsp;'<a href="http://www.dns.com/api/createDomains/?AUTH_TOKEN=$(AUTH_TOKEN)&amp;mode=group&amp;group=Woot">http://www.dns.com/api/createDomains/?AUTH_TOKEN=$(AUTH_TOKEN)&amp;mode=group&amp;group=Woot</a>'&nbsp;-d&nbsp;'domains=example1.com.&amp;domains=example2.com.&amp;domains=example3.com.'<br>
+HTTP/1.0&nbsp;200&nbsp;OK<br>
+Date:&nbsp;Tue,&nbsp;13&nbsp;Apr&nbsp;2010&nbsp;13:12:12&nbsp;GMT<br>
+Server:&nbsp;WSGIServer/0.1&nbsp;Python/2.6.4<br>
+Vary:&nbsp;Accept-Language,&nbsp;Cookie<br>
+Content-Type:&nbsp;application/json<br>
+Content-Language:&nbsp;en-us<br>
+&nbsp;<br>
+{"meta":&nbsp;{"success":&nbsp;1},&nbsp;"data":&nbsp;{"example1.com.":&nbsp;57808,&nbsp;"example2.com.":&nbsp;57809,&nbsp;"example3.com.":&nbsp;57807}}<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@response<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"meta"&nbsp;:&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"success":1,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"data"&nbsp;:&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"example1.com."&nbsp;:&nbsp;"115",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"example2.com."&nbsp;:&nbsp;"732",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"example3.com."&nbsp;:&nbsp;"232",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</tt></dd></dl>
+
+</body></html>

@@ -1,0 +1,32 @@
+        Insert multiple domains.
+
+        If the mode is advanced, just like with individual imports, the SOA
+        will be the only configuration option already created. All additional
+        settings will have to be called on their own.
+
+        @required string `mode` the operational mode
+        @opitonal string `group` name of the domain group to add
+                                the domains to _IF_ `mode` is 'group'
+        @required list `domains` a list of domains in POST data
+
+        @example
+        $curl -i 'http://www.dns.com/api/createDomains/?AUTH_TOKEN=$(AUTH_TOKEN)&mode=group&group=Woot' -d 'domains=example1.com.&domains=example2.com.&domains=example3.com.'
+HTTP/1.0 200 OK
+Date: Tue, 13 Apr 2010 13:12:12 GMT
+Server: WSGIServer/0.1 Python/2.6.4
+Vary: Accept-Language, Cookie
+Content-Type: application/json
+Content-Language: en-us
+
+{"meta": {"success": 1}, "data": {"example1.com.": 57808, "example2.com.": 57809, "example3.com.": 57807}}
+
+        @response
+        {"meta" : {
+                "success":1,
+                },
+        "data" : {
+                "example1.com." : "115",
+                "example2.com." : "732",
+                "example3.com." : "232",
+                }
+        }

@@ -14,6 +14,7 @@ Return the RR data that a hostname has configured
 "data": [{
         "city": null,
         "date_last_modified": "2009-04-27 13:31:03",
+        "geoGroup": null,
         "country": null,
         "region": null,
         "priority": null,

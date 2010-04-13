@@ -11,13 +11,11 @@ Fetch a list of users
 "data": [{
         "first_name": "Example",
         "last_name": "User",
-        "type": "enterprise",
         "id": 169,
         "email": "example@example.com"
 },{
         "first_name": "Demo",
         "last_name": "User",
-        "type": "domainer",
         "id": 170,
         "email": "demo@example.com"
 }]
