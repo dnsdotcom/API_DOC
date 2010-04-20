@@ -5,6 +5,15 @@
 <dl><dt><a name="-createDomainGroup"><strong>createDomainGroup</strong></a>(request, *args, **kwargs)</dt><dd><tt>Create&nbsp;a&nbsp;domain&nbsp;group.<br>
 &nbsp;<br>
 @required&nbsp;string&nbsp;`name`&nbsp;Name&nbsp;of&nbsp;the&nbsp;new&nbsp;Group<br>
+@optional&nbsp;string&nbsp;`rname`&nbsp;contact&nbsp;for&nbsp;SOA&nbsp;of&nbsp;this&nbsp;zone.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex:&nbsp;admin@example.com.&nbsp;is&nbsp;admin.example.com.<br>
+@optional&nbsp;string&nbsp;`ns`&nbsp;list&nbsp;of&nbsp;nameservers&nbsp;to&nbsp;use<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex:&nbsp;ns=ns1.example.com&amp;ns=ns2.example.com.<br>
+@optional&nbsp;string&nbsp;`primary_wildcard`&nbsp;IP&nbsp;or&nbsp;CNAME&nbsp;destination&nbsp;for&nbsp;a&nbsp;wildcard<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;the&nbsp;primary&nbsp;zone<br>
+@optional&nbsp;string&nbsp;`primary_wildcard_qtype`&nbsp;Either&nbsp;A&nbsp;or&nbsp;CNAME&nbsp;are&nbsp;allowed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IS&nbsp;REQUIRED&nbsp;IF&nbsp;`primary_wildcard`&nbsp;IS&nbsp;SUPPLIED<br>
+@optional&nbsp;string&nbsp;`default_mx`&nbsp;MX&nbsp;Destination&nbsp;for&nbsp;email<br>
 &nbsp;<br>
 @response<br>
 {"meta"&nbsp;:&nbsp;{<br>
