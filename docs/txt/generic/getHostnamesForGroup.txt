@@ -4,27 +4,27 @@ Return the hostnames that have been created under a domain group
 
 @response
 {"meta": {
-        "group": "My Custom Group",
-        "success": 1
+    "group": "My Custom Group",
+    "success": 1
 },
 "data": [{
-        "num_rr": 3,
-        "date_created": "2009-04-27 13:31:03",
-        "id": 158,
-        "name": "",
-        "date_last_modified": "2009-04-27 13:31:03"
+    "num_rr": 3,
+    "date_created": "2009-04-27 13:31:03",
+    "id": 158,
+    "name": "",
+    "date_last_modified": "2009-04-27 13:31:03"
 }, {
-        "num_rr": 1,
-        "date_created": "2009-04-27 13:31:03",
-        "id": 159,
-        "name": "www",
-        "date_last_modified": "2009-04-27 13:31:03"
+    "num_rr": 1,
+    "date_created": "2009-04-27 13:31:03",
+    "id": 159,
+    "name": "www",
+    "date_last_modified": "2009-04-27 13:31:03"
 }, {
-        "num_rr": 1,
-        "date_created": "2009-04-27 13:31:03",
-        "id": 160,
-        "name": "mail",
-        "date_last_modified": "2009-04-27 13:31:03"
+    "num_rr": 1,
+    "date_created": "2009-04-27 13:31:03",
+    "id": 160,
+    "name": "mail",
+    "date_last_modified": "2009-04-27 13:31:03"
 }]
 }
 

@@ -6,17 +6,17 @@ Fetch a list of users
 
 @response
 {"meta": {
-        "success": 1
+    "success": 1
 },
 "data": [{
-        "first_name": "Example",
-        "last_name": "User",
-        "id": 169,
-        "email": "example@example.com"
+    "first_name": "Example",
+    "last_name": "User",
+    "id": 169,
+    "email": "example@example.com"
 },{
-        "first_name": "Demo",
-        "last_name": "User",
-        "id": 170,
-        "email": "demo@example.com"
+    "first_name": "Demo",
+    "last_name": "User",
+    "id": 170,
+    "email": "demo@example.com"
 }]
 }

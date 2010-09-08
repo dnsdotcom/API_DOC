@@ -4,16 +4,16 @@ Get a list of the available geogroups
 
 @response
 {"meta": {
-        "success": 1
-        },
+    "success": 1
+    },
 "data": [{
-        "editable": false,
-        "id": 2,
-        "name": "Europe",
-        },
-        {
-        "editable": true,
-        "id": 5,
-        "name": "West Coast"
+    "editable": false,
+    "id": 2,
+    "name": "Europe",
+    },
+    {
+    "editable": true,
+    "id": 5,
+    "name": "West Coast"
 }]
 }

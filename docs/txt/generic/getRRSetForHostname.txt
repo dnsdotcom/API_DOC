@@ -8,21 +8,21 @@ Return the RR data that a hostname has configured
 
 @response
 {"meta": {
-        "fqdn": "www.example.net.",
-        "success": 1
+    "fqdn": "www.example.net.",
+    "success": 1
 },
 "data": [{
-        "city": null,
-        "date_last_modified": "2009-04-27 13:31:03",
-        "geoGroup": null,
-        "country": null,
-        "region": null,
-        "priority": null,
-        "answer": "209.40.206.249",
-        "date_created": "2009-04-27 13:31:03",
-        "type": "A",
-        "id": 285,
-        "ttl":3600,
-        "is_wildcard":0
+    "city": null,
+    "date_last_modified": "2009-04-27 13:31:03",
+            "geoGroup": null,
+    "country": null,
+    "region": null,
+    "priority": null,
+    "answer": "209.40.206.249",
+    "date_created": "2009-04-27 13:31:03",
+    "type": "A",
+    "id": 285,
+    "ttl":3600,
+    "is_wildcard":0
 }]
 }

@@ -8,17 +8,17 @@ Get logging information
 
 @response
 {"meta":{
-        "success":1,
-        "domain":"example.com.",
-        "start":"2009-12-29",
-        "queries":500,
-        "end":"2009-12-30"
+    "success":1,
+    "domain":"example.com.",
+    "start":"2009-12-29",
+    "queries":500,
+    "end":"2009-12-30"
 },
 "data":[{
-        "date":"2009-12-29",
-        "bytes_sent":123456,
-        "bytes_received":123456,
-        "queries":100,
-        "bytes_total":246912
-        }]
+    "date":"2009-12-29",
+    "bytes_sent":123456,
+    "bytes_received":123456,
+    "queries":100,
+    "bytes_total":246912
+    }]
 }

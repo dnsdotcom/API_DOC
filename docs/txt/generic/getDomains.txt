@@ -3,13 +3,13 @@ Get Domains in a user account.
 @required string `search_term` Keyword to search for.
 @response
 {"meta": {
-        "success": 1
+    "success": 1
 },
 "data": [{
-        "id" : 4,
-        "date_created" : "2009-08-03 20:38:33",
-        "date_last_modified":"2009-08-03 20:38:33",
-        "name":"groupexample.net.",
-        "mode":"group"
+    "id" : 4,
+    "date_created" : "2009-08-03 20:38:33",
+    "date_last_modified":"2009-08-03 20:38:33",
+    "name":"groupexample.net.",
+    "mode":"group"
 }]
 }

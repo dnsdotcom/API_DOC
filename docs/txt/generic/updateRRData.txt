@@ -4,3 +4,5 @@ An API to update a dynamic IP address.
 @required string `rdata` answer data
 
 @optional integer `ttl` Time To Live for resolvers to hold cache of rdata, between 1 and 65535
+@optional integer `priority` 0,5,15,20,25 MX preferences
+@optioanl boolean `is_wildcard` is this a wildcard record or not

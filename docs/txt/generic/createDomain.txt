@@ -4,21 +4,21 @@ Create a domain name.
 @required string `domain` the domain name.
 
 @optional string `group` name of the domain group to add
-                        the domain to _IF_ `mode` is 'group'
+            the domain to _IF_ `mode` is 'group'
 [-- Ignored By Group Additions --]
 @optional string `rname` contact for SOA of this zone.
-                        ex: admin@example.com. is admin.example.com
+            ex: admin@example.com. is admin.example.com
 @optional string `ns` list of name servers to use
-                        ex: ns=ns1.example.com&ns=ns2.example.com
+            ex: ns=ns1.example.com&ns=ns2.example.com
 @optional string `primary_wildcard` IP or CNAME destination for a wildcard
-                                        on the primary zone
+                    on the primary zone
 @optional string `primary_wildcard_qtype` Either A or CNAME are allowed
-                                        IS REQUIRED IF `primary_wildcard` IS SUPPLIED
+                    IS REQUIRED IF `primary_wildcard` IS SUPPLIED
 @optional string `default_mx` MX Destination for email
 
 @response
 {"meta" : {
-        "success" : 1,
-        "id" : 3233
-        }
+    "success" : 1,
+    "id" : 3233
+    }
 }
