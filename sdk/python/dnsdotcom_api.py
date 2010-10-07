@@ -9,7 +9,7 @@ class Provision(object):
 		if self.sandbox:
 			conn = httplib.HTTPConnection('sandbox.dns.com')
 		else:
-			conn = httplib.HTTPSConnection('www.dns.com')
+			conn = httplib.HTTPSConnection('app.dns.com')
 
 		# attach user authentication information if not already attached
 		if 'AUTH_TOKEN' not in args:

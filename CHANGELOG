@@ -1,3 +1,7 @@
+Brian Smith <brian@dns.com> 10/07/2010
+* Updating documentation to express a migration of API access from the www.dns.com zone to app.dns.com.
+
+
 Brian Smith <brian@dns.com> 02/05/2010
 * Adding sdk/
 * Splitting documentation into contexual relevance

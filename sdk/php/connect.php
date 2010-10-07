@@ -36,7 +36,7 @@ class DNSDOTCOM_API {
 		if ($this->_sandbox) {
 			return "http://sandbox.dns.com/api/";
 		}
-		return "https://www.dns.com/api/";
+		return "https://app.dns.com/api/";
 	}
 
 	function __call($cmd, $args) {

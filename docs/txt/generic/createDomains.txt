@@ -10,7 +10,7 @@ settings will have to be called on their own.
 @required list `domains` a list of domains in POST data
 
 @example
-$curl -i 'http://www.dns.com/api/createDomains/?AUTH_TOKEN=$(AUTH_TOKEN)&mode=group&group=Woot' -d 'domains=example1.com.&domains=example2.com.&domains=example3.com.'
+$curl -i 'http://sandbox.dns.com/api/createDomains/?AUTH_TOKEN=$(AUTH_TOKEN)&mode=group&group=Woot' -d 'domains=example1.com.&domains=example2.com.&domains=example3.com.'
 HTTP/1.0 200 OK
 Date: Tue, 13 Apr 2010 13:12:12 GMT
 Server: WSGIServer/0.1 Python/2.6.4
