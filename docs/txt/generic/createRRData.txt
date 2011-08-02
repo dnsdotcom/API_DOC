@@ -14,7 +14,7 @@ Create a new resource record (RR).
 @optional string `city` city name
 @optional integer `priority` Integer value for MX (mail) records
 @optional bool `is_wildcard` indicate the RR is a wildcard.
-@optional integer `ttl` Time To Live for resolvers to hold cache of rdata, between 1 and 65535
+@optional integer `ttl` Time To Live for resolvers to hold cache of rdata, between 1 and 604800 ( 7 days )
 
 [--- Supported Resource Record Types ---]
 A, AAAA, MX, NS, CNAME, PTR, SOA, TXT, URL302, URL301, URLFrame, SRV

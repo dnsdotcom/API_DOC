@@ -2,9 +2,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: function removeRR</title>
 </head><body bgcolor="#f0f0f8">
-<dl><dt><a name="-removeRR"><strong>removeRR</strong></a>(request, *args, **kwargs)</dt><dd><tt>Remove&nbsp;RData&nbsp;from&nbsp;a&nbsp;host.<br>
+<dl><dt><a name="-removeRR"><strong>removeRR</strong></a>(request, *args, **kwargs)</dt><dd><tt>Removes&nbsp;resourse&nbsp;record&nbsp;specified&nbsp;by&nbsp;``rr_id``&nbsp;from&nbsp;a&nbsp;host.&nbsp;To<br>
+prevent&nbsp;accidental&nbsp;deletion&nbsp;of&nbsp;an&nbsp;RR,&nbsp;``confirm``&nbsp;parameter&nbsp;has&nbsp;to<br>
+be&nbsp;present.<br>
 &nbsp;<br>
-@required&nbsp;integer&nbsp;`rr_id`&nbsp;rdata&nbsp;id&nbsp;as&nbsp;queried&nbsp;from&nbsp;server.<br>
-@required&nbsp;bool&nbsp;`confirm`&nbsp;bit&nbsp;must&nbsp;be&nbsp;set&nbsp;to&nbsp;process</tt></dd></dl>
+Required&nbsp;args:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;``rr_id``:&nbsp;resource&nbsp;record&nbsp;id&nbsp;as&nbsp;queried&nbsp;from&nbsp;server,&nbsp;integer.<br>
+&nbsp;&nbsp;&nbsp;``confirm``:&nbsp;confirmation&nbsp;bit,&nbsp;must&nbsp;be&nbsp;set&nbsp;to&nbsp;non-''&nbsp;value&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;process.<br>
+&nbsp;<br>
+Returns:&nbsp;<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;A&nbsp;JSON&nbsp;object&nbsp;with&nbsp;indication&nbsp;of&nbsp;either&nbsp;success&nbsp;or&nbsp;failure.&nbsp;In<br>
+&nbsp;&nbsp;&nbsp;case&nbsp;of&nbsp;failure&nbsp;the&nbsp;response&nbsp;should&nbsp;contain&nbsp;a&nbsp;textual&nbsp;error<br>
+&nbsp;&nbsp;&nbsp;description.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;Example&nbsp;of&nbsp;a&nbsp;successful&nbsp;invocation:&nbsp;``{"meta":&nbsp;{"success":&nbsp;1,<br>
+&nbsp;&nbsp;&nbsp;"code":&nbsp;200}}``<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;Example&nbsp;of&nbsp;a&nbsp;failed&nbsp;invocation:&nbsp;``{"meta":&nbsp;{"code":&nbsp;404,<br>
+&nbsp;&nbsp;&nbsp;"success":&nbsp;0,&nbsp;"error":&nbsp;"RR&nbsp;Record&nbsp;not&nbsp;found"}}``</tt></dd></dl>
 
 </body></html>

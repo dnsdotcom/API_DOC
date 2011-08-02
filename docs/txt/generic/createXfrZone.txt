@@ -1,0 +1,16 @@
+Create a new hostname that will act as the root of an
+xfr zone.
+
+@required string `domain`
+
+@required string `host`
+  Host name value, can be empty to indicate root zone of the domain
+
+@required string `master` 
+  IP Address of master server to sync from
+
+@optional integer `port`
+  Use for master on non-standard port
+  
+@optional integer `refresh_interval`
+  How long between zone resyncronizations

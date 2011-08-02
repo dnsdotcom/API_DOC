@@ -1,4 +1,21 @@
-Remove RData from a host.
+Removes resourse record specified by ``rr_id`` from a host. To
+prevent accidental deletion of an RR, ``confirm`` parameter has to
+be present.
 
-@required integer `rr_id` rdata id as queried from server.
-@required bool `confirm` bit must be set to process
+Required args:
+
+   ``rr_id``: resource record id as queried from server, integer.
+   ``confirm``: confirmation bit, must be set to non-'' value to
+   process.
+
+Returns: 
+
+   A JSON object with indication of either success or failure. In
+   case of failure the response should contain a textual error
+   description.
+
+   Example of a successful invocation: ``{"meta": {"success": 1,
+   "code": 200}}``
+
+   Example of a failed invocation: ``{"meta": {"code": 404,
+   "success": 0, "error": "RR Record not found"}}``

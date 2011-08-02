@@ -3,6 +3,18 @@ An API to update a dynamic IP address.
 @required integer `rr_id` rdata id as queried from server.
 @required string `rdata` answer data
 
-@optional integer `ttl` Time To Live for resolvers to hold cache of rdata, between 1 and 65535
+@optional integer `ttl` Time To Live for resolvers to hold cache of rdata, between 1 and 604800 ( 7 days )
 @optional integer `priority` 0,5,15,20,25 MX preferences
 @optioanl boolean `is_wildcard` is this a wildcard record or not
+
+@optional string `retry` retry for SOA record, between 0 and 2147483647L (32bit)
+@optional string `expire` expire for SOA record, between 0 and 2147483647L (32bit)
+@optional string `minimum` minimum for SOA record, between 0 and 2147483647L (32bit)
+
+@optional string `weight` weight for SRV record, between 0 and 65535 (16bit)
+@optional string `port` port for SRV record, between 0 and 65535 (16bit)
+@optional string `priority` priority  for SRV record, between 0 and 2147483647L (32bit)
+
+@optional string `title` title for URLFrame record
+@optional string `keywords` keywords for URLFrame record
+@optional string `description` description  for URLFrame record

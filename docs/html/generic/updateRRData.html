@@ -7,8 +7,20 @@
 @required&nbsp;integer&nbsp;`rr_id`&nbsp;rdata&nbsp;id&nbsp;as&nbsp;queried&nbsp;from&nbsp;server.<br>
 @required&nbsp;string&nbsp;`rdata`&nbsp;answer&nbsp;data<br>
 &nbsp;<br>
-@optional&nbsp;integer&nbsp;`ttl`&nbsp;Time&nbsp;To&nbsp;Live&nbsp;for&nbsp;resolvers&nbsp;to&nbsp;hold&nbsp;cache&nbsp;of&nbsp;rdata,&nbsp;between&nbsp;1&nbsp;and&nbsp;65535<br>
+@optional&nbsp;integer&nbsp;`ttl`&nbsp;Time&nbsp;To&nbsp;Live&nbsp;for&nbsp;resolvers&nbsp;to&nbsp;hold&nbsp;cache&nbsp;of&nbsp;rdata,&nbsp;between&nbsp;1&nbsp;and&nbsp;604800&nbsp;(&nbsp;7&nbsp;days&nbsp;)<br>
 @optional&nbsp;integer&nbsp;`priority`&nbsp;0,5,15,20,25&nbsp;MX&nbsp;preferences<br>
-@optioanl&nbsp;boolean&nbsp;`is_wildcard`&nbsp;is&nbsp;this&nbsp;a&nbsp;wildcard&nbsp;record&nbsp;or&nbsp;not</tt></dd></dl>
+@optioanl&nbsp;boolean&nbsp;`is_wildcard`&nbsp;is&nbsp;this&nbsp;a&nbsp;wildcard&nbsp;record&nbsp;or&nbsp;not<br>
+&nbsp;<br>
+@optional&nbsp;string&nbsp;`retry`&nbsp;retry&nbsp;for&nbsp;SOA&nbsp;record,&nbsp;between&nbsp;0&nbsp;and&nbsp;2147483647L&nbsp;(32bit)<br>
+@optional&nbsp;string&nbsp;`expire`&nbsp;expire&nbsp;for&nbsp;SOA&nbsp;record,&nbsp;between&nbsp;0&nbsp;and&nbsp;2147483647L&nbsp;(32bit)<br>
+@optional&nbsp;string&nbsp;`minimum`&nbsp;minimum&nbsp;for&nbsp;SOA&nbsp;record,&nbsp;between&nbsp;0&nbsp;and&nbsp;2147483647L&nbsp;(32bit)<br>
+&nbsp;<br>
+@optional&nbsp;string&nbsp;`weight`&nbsp;weight&nbsp;for&nbsp;SRV&nbsp;record,&nbsp;between&nbsp;0&nbsp;and&nbsp;65535&nbsp;(16bit)<br>
+@optional&nbsp;string&nbsp;`port`&nbsp;port&nbsp;for&nbsp;SRV&nbsp;record,&nbsp;between&nbsp;0&nbsp;and&nbsp;65535&nbsp;(16bit)<br>
+@optional&nbsp;string&nbsp;`priority`&nbsp;priority&nbsp;&nbsp;for&nbsp;SRV&nbsp;record,&nbsp;between&nbsp;0&nbsp;and&nbsp;2147483647L&nbsp;(32bit)<br>
+&nbsp;<br>
+@optional&nbsp;string&nbsp;`title`&nbsp;title&nbsp;for&nbsp;URLFrame&nbsp;record<br>
+@optional&nbsp;string&nbsp;`keywords`&nbsp;keywords&nbsp;for&nbsp;URLFrame&nbsp;record<br>
+@optional&nbsp;string&nbsp;`description`&nbsp;description&nbsp;&nbsp;for&nbsp;URLFrame&nbsp;record</tt></dd></dl>
 
 </body></html>

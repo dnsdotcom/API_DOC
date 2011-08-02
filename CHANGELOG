@@ -1,3 +1,9 @@
+
+Michael Speer <michael@dns.com> 08/02/2011
+* Added documentation for XFR support calls
+* Included minor updates to documentation for other calls
+
+
 Brian Smith <brian@dns.com> 10/07/2010
 * Updating documentation to express a migration of API access from the www.dns.com zone to app.dns.com.
 

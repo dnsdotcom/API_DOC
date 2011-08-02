@@ -1,0 +1,5 @@
+Remove an xfr zone, including all records thereof
+
+@required string `domain`
+@required string `host`
+  Hostname, can be empty to indicate root zone of the domain
