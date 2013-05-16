@@ -1,4 +1,5 @@
 DNS.com API Documentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This document serves as an overview to the DNS.com DNS service API.
 To attain access to use the API approval must be applied for and granted
@@ -12,6 +13,7 @@ execute on these concepts to manage their account.
 
 
 Technology Overview
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To access the API special permission must be granted by the
 administrators. Please contact DNS.com for this access, as well as
@@ -25,6 +27,7 @@ and will return a crafted JSON () formated data response.
 
 
 For Testing and Integration Developers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The address to the sandbox location is . To interact with the sandbox
 you must create your own account on it. The sandbox is an entire test
@@ -35,6 +38,7 @@ URL forward services are available for testing on port 8080.
 
 
 A Note For Enterprise Users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please be aware there is a variable replacement allowed. When records
 are compiled the token %s is replaced with the domain name root zone.
@@ -53,6 +57,7 @@ example2.com CNAME → www.example2.com
 
 
 Round Robin Support
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To implement round robin hosting for your domain all that is required is
 to create 2 RR records. The multiple RR's will cycle during serving thus
@@ -62,6 +67,7 @@ giving the effect of round robin.
 
 
 URL Forward Support
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To ensure we are always able to return a record for any host name
 requested we require that if you want to use URL forwarding that a
@@ -72,6 +78,7 @@ be allowed to co-exist for a host name with other resource record types.
 
 
 Terminology
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Operational Mode
 
@@ -111,10 +118,14 @@ the answer.
 
 
 Required Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 AUTH_TOKEN - 28 Byte authorization token generated.
 
+
+
 Example Request
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <?php
 $AUTH_TOKEN = 'xxxxxxxxxxxxxxxxxxxxx';
@@ -131,6 +142,7 @@ echo $results;
 
 
 Example Successful Response
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {"meta": {
 	"success": 1
@@ -153,6 +165,7 @@ Example Successful Response
 
 
 Example Error Response
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {"meta": {
 	"success": 0,
@@ -164,3 +177,119 @@ Example Error Response
 
 Additionally: If a search or lookup fails will return in a HTTP header
 response code 404. For Errors 500 and so on.
+
+
+
+
+Example Code
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+How to create a complete zone configuration.
+
+This example will create this zone data with the DNS.com API.
+
+$ORIGIN=example.com.
+
+@ IN SOA ns1.dns.com. admin.example.com. (
+     2013051614,
+     3600,
+     1200,
+     1209600,
+     1800)
+
+@ 1800 IN A 127.0.0.1
+  3600 IN MX 10 mail.example.com.
+  3600 IN TXT "v=spf1 ip4:127.0.0.2 +all"
+
+
+www 1800 IN A 127.0.0.1
+
+_xmpp-server._tcp 3600 IN SRV 0 5 5269 chat.example.com.
+
+mail.example.com 3600 IN A 127.0.0.2
+chat.example.com 3600 IN A 127.0.0.3
+
+[Python]
+from dnsdotcom_api import Provision
+
+DOMAIN='example.com'
+
+dnsObj = Provision(auth_token='XXXXXXXXXXXXXXXXXXXXXXXXX')
+
+## creat the domain
+domain = dnsObj.query('createDomain', {
+    'mode' : 'advanced',
+    'domain' : DOMAIN,
+    'rname' : 'admin.example.com',
+    })
+
+assert domain['meta']['success']
+
+domain_id = domain['meta']['id']
+
+## when the domain is created the root hostname is created automaticly
+
+r= dnsObj.query('createRRData', {
+    'domain' : DOMAIN,
+    'host'   : '',
+    'type'   : 'A',
+    'rdata'  : '127.0.0.1',
+    'ttl'    : 1800
+})
+
+dnsObj.query('createRRData', {
+    'domain'   : DOMAIN,
+    'host'     : '',
+    'type'     : 'MX',
+    'priority' : 10,
+    'rdata'    : 'mail.example.com.'
+    })
+
+dnsObj.query('createRRData', {
+    'domain' : DOMAIN,
+    'host'   : '',
+    'type'   : 'TXT',
+    'rdata'  : 'v=spf1 ip4:127.0.0.2 +all'
+    })
+
+## Create the www host and rr
+dnsObj.query('createHostname', {
+    'domain'   : DOMAIN,
+    'host'     : 'www'
+    })
+## `default` cannot be used because the A record has a non-default TTL
+dnsObj.query('createRRData', {
+    'domain'  : DOMAIN,
+    'host'    : 'www',
+    'type'    : 'A',
+    'rdata'   : '127.0.0.1',
+    'ttl'     : 1800
+    })
+
+## creating the jabber server SRV record
+dnsObj.query('createHostname', {
+    'domain'   : DOMAIN,
+    'host'     : '_xmpp-server._tcp'
+    })
+dnsObj.query('createRRData', {
+    'domain'   : DOMAIN,
+    'host'     : '_xmpp-server._tcp',
+    'type'     : 'SRV',
+    'priority' : 0,
+    'weight'   : 5,
+    'port'     : 5269,
+    'rdata'    : 'chat.example.com.'
+    })
+
+## these hosts just direct to a single IP with a 1h TTL
+dnsObj.query('createHostname', {
+    'domain'  : DOMAIN,
+    'host'    : 'mail',
+    'default' : '127.0.0.2'
+    })
+
+dnsObj.query('createHostname', {
+    'domain'  : DOMAIN,
+    'host'    : 'chat',
+    'default' : '127.0.0.3'
+    })
